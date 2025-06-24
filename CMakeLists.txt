@@ -33,8 +33,13 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY config description launch worlds
+  DIRECTORY config description launch worlds parameters
   DESTINATION share/${PROJECT_NAME}
+)
+
+# Add below ament_package()
+install(DIRECTORY scout_one
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
